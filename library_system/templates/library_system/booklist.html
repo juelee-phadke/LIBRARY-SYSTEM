@@ -1,0 +1,23 @@
+{% load static %}
+<body style="background-image:url(./../../static/library.jpg);position: relative;">
+    <div style="background-color: azure; margin:50px 300px 20px 200px;padding: 20px; ">
+    <h3 style="font-weight: bold;">BOOKS STATUS</h3>
+
+<table>
+   <tr>
+      <td style="font-style: italic;font-weight: bold;">ISBN</td>
+      <td style="font-style: italic;font-weight: bold;">BOOK NAME</td>
+      <td style="font-style: italic;font-weight: bold;">AUTHOR</td>
+      <td style="font-style: italic;font-weight: bold;">STATUS</td>
+   </tr>
+{% for book in booklist %}
+   <tr>
+    <td style="font-style: italic;">{{book.isbn}}</td>
+    <td style="font-style: italic;">{{book.name}}</td>
+    <td style="font-style: italic;">{{book.author}}</td>
+    <td style="font-style: italic;">{{book.status}}</td>
+   </tr>
+{% endfor %}
+</table>
+</div>
+</body>

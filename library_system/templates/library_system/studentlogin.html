@@ -1,0 +1,15 @@
+{% load static %}
+<body style="background-image:url(./../../static/library.jpg)">
+<div style="background-color: azure; margin:50px 400px 20px 300px;padding: 20px; ">
+<h3 style="font-weight: bold;">Welcome Student</h3>
+
+<form method="POST" action="{%url 'library_system:studentlogin' %}">
+{% csrf_token %}
+<p style="font-style: italic;">Student ID:</p>
+<input type="text" name="studentID"><br/>
+<p style="font-style: italic;">Password:</p>
+<input type="password" name="studentPwd"><br/>
+<input type="submit" value="Submit" style="border-radius: 8px;height:30px;text-align: center;font-size: 16px;border: none;background-color:#00bfff;margin-top: 20px;">
+</form>
+</div>
+</body>

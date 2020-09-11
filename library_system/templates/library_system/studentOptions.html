@@ -1,0 +1,14 @@
+{% load static %}
+<body style="background-image:url(./../../static/library.jpg)">
+<div style="background-color: azure; margin:50px 400px 20px 300px;padding: 20px; ">
+<h3 style="font-weight: bold;">Welcome {{ studentID}} !</h3>
+<form method="POST" action="{%url 'library_system:studentactions' studentID%}">
+    {% csrf_token %}    
+    <input type="radio" name="studentchoice" value="viewbooks" style="margin:10px;font-style: italic;"> Check Book Status</input><br />
+    <input type="radio" name="studentchoice" value="borrowBook" style="margin:10px;font-style: italic;"> Borrow Book </input></br>
+
+    <input type="radio" name="studentchoice" value="returnbook" style="margin:10px;font-style: italic;"> Return Book</input><br />
+    <input type="submit" value="submit" style="border-radius: 8px;height:30px;text-align: center;font-size: 16px;border: none;background-color:#00bfff;margin-top: 20px;">
+</form>
+</div>
+</body>

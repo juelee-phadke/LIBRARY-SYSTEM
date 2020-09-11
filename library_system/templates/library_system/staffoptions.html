@@ -1,0 +1,23 @@
+{% load static %}
+<body style="background-image:url(./../../static/library.jpg)">
+<div style="background-color: azure; margin:10px 400px 20px 350px;padding: 10px; ">
+<h3 style="font-weight: bold;">Welcome Staff</h3>
+<form method="POST" action="{%url 'library_system:staffactions' %}">
+{% csrf_token %}
+<input type="radio" name="staffchoice" value="viewbooks" style="margin:5px;font-style: italic;"> View All Books</input><br/>
+<input type="radio" name="staffchoice" value="addBook" style="margin:5px;font-style: italic;"> Add Book</input></br>
+<p style="font-style: italic;margin-left: 10px;">Book ISBN:</p>
+<input type="text" name="bookisbn" style="margin-left: 10px;"><br/>
+<p style="font-style: italic;margin-left: 10px;">Book Name:</p>
+<input type="text" name="bookname" style="margin-left: 10px;"><br/>
+<p style="font-style: italic;margin-left: 10px;">Book Author:</p>
+<input type="text" name="bookauthor" style="margin-left: 10px;"><br/>
+<p style="font-style: italic;margin-left: 10px;">BookStatus:</p>
+<input type="text" name="bookstatus" style="margin-left: 10px;"><br/>
+<input type="radio" name="staffchoice" value="deletebook" style="margin:10px;font-style: italic;"> Delete Book</input><br/>
+<p style="font-style: italic;margin-left: 10px;">Enter ISBN:</p>
+<input type="text" name="bookdelisbn" style="margin-left: 10px;"><br/>
+
+<input type="submit" value="submit" style="border-radius: 8px;height:30px;text-align: center;font-size: 16px;border: none;background-color:#00bfff;margin-top: 20px;margin-left: 10px;">
+
+</form>

@@ -12,5 +12,5 @@ navigate to project folder and run the below commands:
 python manage.py migrate --- creates the necessary tables according to described model
 python manage.py runserver
 
-application is accessible at : http://localhost:8000/library_system/
+application is accessible at : localhost:8000/library_system/
 
